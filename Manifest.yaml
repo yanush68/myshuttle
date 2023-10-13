@@ -1,0 +1,24 @@
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: myshuttle
+  labels:
+    app: myshuttle
+spec:
+  replicas: 1
+  selectors:
+    matchlabels: 
+      app: myshuttle
+  template:
+    metadata:
+      labels:
+        app: myshuttle
+spec:
+  containers:
+  - name: myshuttle
+    image: azureayacrdemo.azurecr.io/azureayacrdemo:#(buildno)#
+    ports:
+    - containerports: 8080
+    
+    
+    
