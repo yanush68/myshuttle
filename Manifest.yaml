@@ -16,7 +16,7 @@ spec:
 spec:
   containers:
   - name: myshuttle
-    image: azureayacrdemo.azurecr.io/azureayacrdemo:#(buildno)#
+    image: azureayacrdemo.azurecr.io/azureayacrdemo:#{buildno}#
     ports:
     - containerports: 8080
     
